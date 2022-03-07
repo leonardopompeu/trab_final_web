@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <script>
         function createAccount(){
-            var teste = document.getElementsByClassName("textfield").value;
-            var arr = [].slice.call(teste);
-            console.log(arr[0])
-            console.log(arr[1])
-            console.log(arr[2])
+            var nome = document.getElementById("inputnome").value
+            var usuario = document.getElementById("inputusuario").value
+            var senha = document.getElementById("inputsenha").value
+            console.log(nome)
+            console.log(usuario)
+            console.log(senha)
         }
     </script>
 </head>
@@ -28,15 +29,15 @@
                 <h1>LOGIN</h1>
                 <div class="textfield">
                     <label for="nome">Nome</label>
-                    <input type="text" name="nome" placeholder="Nome">
+                    <input type="text" name="nome" placeholder="Nome" id="inputnome">
                 </div>
                 <div class="textfield">
                     <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
+                    <input type="text" name="usuario" placeholder="Usuário" id="inputusuario">
                 </div>
                 <div class="textfield">
                     <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
+                    <input type="password" name="senha" placeholder="Senha" id="inputsenha">
                 </div>
                 <button class="btn-create-account"  onclick="createAccount()"><a href="/static/index.html">Criar Conta</a></button>
             </div>
