@@ -22,6 +22,7 @@
                 console.log(usuario);
                 console.log(senha);
                 for(var i = 0; i<resp.data.lenght; i++){
+                    console.log(i)
                     console.log(resp.data[i]["usuario"])
                     console.log(resp.data[i]["senha"])
                     if(resp.data[i]["usuario"] == usuario & resp.data[i]["senha"] == senha){
