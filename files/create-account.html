@@ -8,12 +8,19 @@
     <link rel="stylesheet" href="style.css">
     <script>
         function createAccount(){
-            var nome = document.getElementById("inputnome").value
-            var usuario = document.getElementById("inputusuario").value
-            var senha = document.getElementById("inputsenha").value
-            console.log(nome)
-            console.log(usuario)
-            console.log(senha)
+            var nome = document.getElementById("inputnome").value;
+            var usuario = document.getElementById("inputusuario").value;
+            var senha = document.getElementById("inputsenha").value;
+            console.log(nome);
+            console.log(usuario);
+            console.log(senha);
+
+            var axios = require("axios");
+            axios.post("https://trab-web-final.herokuapp.com/users", {
+                "nome": nome,
+                "usuario": usuario,
+                "senha": senha, 
+            })
         }
     </script>
 </head>
