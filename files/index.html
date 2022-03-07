@@ -12,6 +12,29 @@
         axios.get("https://trab-web-final.herokuapp.com/users").then(resp => {
             console.log(resp.data);
         });
+
+        function loginAuthenticate(){
+            axios.get("https://trab-web-final.herokuapp.com/users").then(resp => {
+                console.log(resp.data);
+                var authenticated = false
+                var usuario = document.getElementById("inputusuario").value;
+                var senha = document.getElementById("inputsenha").value;
+                console.log(usuario);
+                console.log(senha);
+                for(var i = 0; i<resp.data.lenght; i++){
+                    if(resp.data[i]["usuario"] == usuario & resp.data[i]["senha"] == senha){
+                        authenticated = true;
+                        break;
+                    }
+                }
+                if(authenticated == true){
+                    location.assign('https://trab-web-final.herokuapp.com/users');
+                }else{
+                    alert("Usuário Incorreto");
+                }
+
+            });
+        }
     </script>
 </head>
 <body>
@@ -33,7 +56,7 @@
                     <input type="password" name="senha" placeholder="Senha">
                 </div>
                 <a href="/static/create-account.html"><button class="btn-create-account"> Criar Conta</button></a>
-                <a><button class="btn-login">Login</button></a>
+                <a><button class="btn-login" onclick="loginAuthenticate()">Login</button></a>
             </div>
         </div>
     </div>
