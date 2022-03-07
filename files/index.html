@@ -8,26 +8,13 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-
-        axios.get("https://trab-web-final.herokuapp.com/users").then(resp => {
-            console.log(resp.data);
-        });
-
         function loginAuthenticate(){
             axios.get("https://trab-web-final.herokuapp.com/users").then(resp => {
                 console.log(resp.data);
                 var authenticated = false
                 var usuario = document.getElementById("inputusuario").value;
                 var senha = document.getElementById("inputsenha").value;
-                console.log(usuario);
-                console.log(senha);
-                console.log(resp.data.lenght)
-                console.log(resp.data[0]["usuario"])
-                console.log(resp.data[0]["senha"])
-                for(var i = 0; i<resp.data.lenght; i++){
-                    console.log(i)
-                    console.log(resp.data[i]["usuario"])
-                    console.log(resp.data[i]["senha"])
+                for(var i = 0; i<resp.data.length; i++){
                     if(resp.data[i]["usuario"] == usuario & resp.data[i]["senha"] == senha){
                         authenticated = true;
                         break;
