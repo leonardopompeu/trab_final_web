@@ -9,15 +9,6 @@ body * {
     box-sizing: border-box;
 }
 
-a {
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 3px;
-    color: #2b134b;
-    background: #00ff88;
-    cursor: pointer;
-    text-decoration: none;
-}
 
 .main-login {
     width: 100vw;
@@ -119,6 +110,21 @@ a {
 }
 
 .btn-create-account {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+a {
     width: 100%;
     padding: 16px 0px;
     margin: 25px;
